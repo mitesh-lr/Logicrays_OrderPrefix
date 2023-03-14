@@ -1,0 +1,9 @@
+#Magento Admin Coonfiguration GraphQl Schema
+
+type StoreConfig {
+    order_prefix_enable : String @doc(description: "To fetch value of module enable or disable"),
+    order_prefix_order_id_prefix : String @doc(description: "fetch value of order id prefix"),
+    order_prefix_invoice_id_prefix : String @doc(description: "fetch value of invoice id prefix"),
+    order_prefix_shipment_id_prefix : String @doc(description: "fetch value of shipment id prefix"),
+    order_prefix_creditmemo_id_prefix : String @doc(description: "fetch value of creditmemo id prefix")
+}

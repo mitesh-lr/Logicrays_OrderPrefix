@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Logicrays
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Logicrays
+ * @package     Logicrays_OrderPrefix
+ * @copyright   Copyright (c) Logicrays (https://www.logicrays.com/)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="orderprefix" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>OrderPrefix</label>
+            <tab>logicrays</tab>
+            <resource>Logicrays_OrderPrefix::orderprefix_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field> 
+                <field id="order_prefix" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Order ID Prefix</label>
+                    <validate>required-entry</validate>
+                    <depends><field id="enable">1</field></depends>
+                     <comment><![CDATA[Enter order id prefix]]></comment>
+                </field>
+                <field id="invoice_prefix" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Invoice Id Prefix</label>
+                    <validate>required-entry</validate>
+                    <depends><field id="enable">1</field></depends>
+                     <comment><![CDATA[Enter invoice id prefix]]></comment>
+                </field>
+                <field id="shipment_prefix" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shipment Id Prefix</label>
+                    <validate>required-entry</validate>
+                    <depends><field id="enable">1</field></depends>
+                     <comment><![CDATA[Enter shipment id prefix]]></comment>
+                </field>
+                <field id="creditmemo_prefix" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Creditmemo Id Prefix</label>
+                    <validate>required-entry</validate>
+                    <depends><field id="enable">1</field></depends>
+                     <comment><![CDATA[Enter creditmemo id prefix]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
