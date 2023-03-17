@@ -1,2 +1,2 @@
-# Logicrays_OrderPrefix
-Logicrays_OrderPrefix Version 1.0.2
+# About  Extension
+This extension allows you to add your custome prefix at Order Id, Shipment Id, Invoice Id, and Creditmemo Id.
